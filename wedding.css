@@ -1,0 +1,332 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling container */
+.container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:411px;
+}
+
+.container1 .row{
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling pages */
+.page {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Styling background images */
+.background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background1 {
+    background-image: url('assests/backgroundImage/background1.png'); /* Add your background image URL here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+/* Styling background images */
+.background2 {
+    background-image: url('assests/backgroundImage/background2.png'); /* Add your background image URL here */
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden; /* Hide overflow content */
+}
+
+
+/* Styling content */
+.content {
+    padding-top: 70px;
+    text-align: center;
+    color: #000000; /* Text color */
+    font-family: 'Special Font', cursive; /* Add your special font here */
+    position: relative;
+    max-height: calc(100vh - 100px); /* Set max-height to 100% viewport height minus some padding */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+/* Styling button */
+button {
+    padding: 10px 20px;
+    background-color:#fdc3af; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: #cccccc; /* Button background color on hover */
+}
+
+/* Styling divider */
+.divider {
+    border-top: 1px solid #000000; /* Divider color */
+    margin: 20px auto;
+    width: 25%;
+}
+
+/* Styling wish timeline */
+.wish-timeline {
+    max-height: 150px; /* Fixed height for scrollable container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.wish-timeline::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.wish-timeline p {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.wish-timeline h5 {
+    margin-bottom: 20px;
+}
+
+.attendance {
+    display:inline-flex;
+    justify-content: space-between;
+}
+
+.attendance .going,
+.attendance .not-going {
+    margin: 0 30px; /* Adjust the margin to create space on both sides of elements */
+    
+}
+
+.attendance p {
+    margin: 0;
+}
+
+p{
+    font-size: 15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#name{
+    font-size: 30px;
+    font-family:'Monotype Corsiva', cursive;
+}
+
+#groom{
+    font-size: 50px;
+    font-family:'Monotype Corsiva', cursive;
+    font-weight:500;
+}
+
+#topic{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+#date{
+    font-size:28px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+#attendance{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling website link */
+h4 {
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Add your special font here */
+}
+
+h5 {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Add your special font here */
+}
+
+.container2 {
+    display: flex;
+    background-color: #fdc3af; /* Change this to your desired background color */
+    padding: 15px; /* Adjust padding as needed */
+    position: fixed;
+    height:10vh;
+    bottom: 0;
+    justify-content: center;
+    width:100%;
+    z-index: 1030;
+}
+
+
+
+.container2 .row{
+    display:inline-flex;
+    align-items: center;
+    left:50%;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-link svg{
+    color: #ffffff;
+    height:50%;
+    width:50%;
+}
+
+.icon-link {
+    text-decoration: none; /* Remove underline */
+}
+
+.icon-link:hover {
+    color: #ffffff; /* Change color on hover */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.icon-link span{
+    font-size: small;
+    color:#ffffff;
+}
+
+.offcanvas {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 100%; /* Initially position offcanvas above the container2 */
+    left: 0;
+    z-index: 100;
+    display: flex;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    background-color: #ffffff; /* Adjust background color */
+    transition:ease-in-out 0.4s;
+}
+
+
+.offcanvas.show {
+    visibility: visible;
+    transform: translateY(-10vh); /* Adjust for space between offcanvas and container2 */
+    display:flex;
+    justify-content: center;
+}
+
+.offcanvas-bottom {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    max-width: 411px;
+    justify-content: center;
+}
+
+.offcanvas-body {
+    display:inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+iframe{
+    max-width: 100%;
+    height:auto;
+}
+
+.offcanvas svg{
+    color:black;
+    height:30px;
+    width:30px;
+}
+
+.offcanvas span{
+    font-size: small;
+    color:black;
+}
+
+.waze-icon{
+    color: #000000;
+    height: 35px;
+    width: 32px;
+}
+
+.phone-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    width:100%
+}
+
+.phone-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.phone-link {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+
+
+
+.phone-icon {
+    color: black; /* Call icon color */
+}
+
+.whatsapp-icon {
+    color: #25d366; /* WhatsApp icon color */
+}
